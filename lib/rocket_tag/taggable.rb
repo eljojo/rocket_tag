@@ -284,9 +284,9 @@ module RocketTag
         unless @setup_for_rocket_tag
           @setup_for_rocket_tag = true
           class_eval do
-            default_scope do
-              preload{taggings}.preload{tags}
-            end
+            # default_scope do
+            #   preload{taggings}.preload{tags}
+            # end
 
             before_save do
               @tag_dirty ||= Set.new
